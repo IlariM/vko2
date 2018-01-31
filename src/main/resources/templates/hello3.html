@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+	
+<head>
+	<title>Server Programming</title>
+</head>
+<body>
+<h1>My Friends</h1>
+<table>
+<tr th:each="Friend : ${friends}">
+<td th:text="${Friend.name}">1</td>
+</tr>
+</table>
+<form action="#" th:action="@{/index}" th:object="${friend}"
+method="post">
+<h1>Add new friend to the list:</h1>
+<p>Lisää nimi: <input type="text" th:field="*{name}"/></p>
+<p>Lähetä: <input type="submit" value="Submit" /></p>
+</form>
+</body>
+</html>
