@@ -8,5 +8,6 @@ public class Vko2Application {
 
 	public static void main(String[] args) {
 		SpringApplication.run(Vko2Application.class, args);
+		//Testi
 	}
 }
